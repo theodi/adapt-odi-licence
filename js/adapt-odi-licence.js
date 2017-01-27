@@ -20,7 +20,7 @@ define([
     getCertificate: function() {
 	string = "<div class='licencePageGraphicElement'><img class='licencePageGraphic' src='adapt/css/assets/badge.png'/></div>";
 	string += "<div class='licencePageText'>";
-	string += "<ul class='open-data-certificate-details'> <li> <span>Open: ODI eLearning Data</span> </li> <li> <span>Pilot Open Data Certificate (final)</span> </li> <li> <span>Active - self certified</span> </li> </ul>";
+	string += "<ul class='open-data-certificate-details'> <li> <span>Open: ODI eLearning Data</span> </li> <li> <span>Pilot Open Data Certificate (final)</span> </li> <li> <span>Active - self certified</span> </li> </ul></div>";
 	string += "<hr class='licencePageRule'/>";
 	return string;
     },
@@ -47,17 +47,18 @@ define([
 	string += "<h2>No warrenty</h2>";
 	string += "<p>The Information is licensed 'as is'. The Open Data Institute is not liable for any errors or omissions in the Information and shall not be liable for any loss, injury or damage of any kind caused by its use. The Information Provider does not guarantee the continued supply of the Information.</p>";
 	
-	string += "<hr class='licencePageRule'/>";
+	string += "</div><hr class='licencePageRule'/>";
 	return string;	
     },
-
+    
     showLicencePage: function() {
-    	licence = Adapt.config.get('_licencePage').licence;
-	string = getCertificate();
-	string += getLicence(licence);
+	string = "";
+  	licence = Adapt.config.get('_licencePage').licence;
+	//string = this.getCertificate();
+	string += this.getLicence(licence);
 	
 	var alertObject = {
-            title: "About",
+            title: "Licence",
             body: string
         };
 

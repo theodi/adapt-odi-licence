@@ -14,7 +14,7 @@
                         "_licencePage" : {
                             "type" : "object",
                             "required" : false,
-                            "legend" : "About Page",
+                            "legend" : "Content licence",
                             "properties" : {
                                  "licence" : {
                                  	"type" : "string",
