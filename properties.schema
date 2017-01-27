@@ -1,0 +1,45 @@
+{
+    "type": "object",
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "id": "http://jsonschema.net",
+    "required": false,
+    "properties" : {
+        "pluginLocations" : {
+            "type" : "object",
+            "required" : true,
+            "properties" : {
+                "config" : {
+                    "type" : "object",
+                    "properties" : {
+                        "_licencePage" : {
+                            "type" : "object",
+                            "required" : false,
+                            "legend" : "About Page",
+                            "properties" : {
+                                 "licence" : {
+                                 	"type" : "string",
+                                        "inputType" : "Text",
+                                        "title" : "Title",
+                                        "default" : "CC-BY 4.0",
+                                        "help" : "Licence for eLearning content",
+                                        "enum" : [ 
+                                                 "CC-BY 4.0", 
+                                                 "CC-BY-SA 4.0"
+                                                 ],
+                                        "inputType" : {
+                                                 "type" : "Select",
+                                                 "options" : [ 
+                                                 	"CC-BY 4.0", 
+	                                                 "CC-BY-SA 4.0" 
+                                                 ]
+                                        },
+                                        "translatable" : true
+                                 }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

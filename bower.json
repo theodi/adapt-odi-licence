@@ -1,0 +1,17 @@
+{
+  "name": "adapt-odi-licence",
+  "version": "0.1.0",
+  "framework": "^2.0.0",
+  "homepage": "https://github.com/theodi/adapt-odi-licence",
+  "issues": "",
+  "displayName" : "Licence terms (in Tutor)",
+  "extension" : "odi-licence",
+  "description": "Adds a cretive commons licence to adapt 2 content.",
+  "main": "/js/adapt-odi-licence.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-extension"
+  ],
+  "license": "GPLv3",
+  "targetAttribute": "_licencePage"
+}
