@@ -36,7 +36,6 @@ define([
 	}
 	string = "<div class='licencePageGraphicElement'><img class='licencePageGraphic' src='"+url+"'/></div>";
 	string += "<div class='licencePageText'>";
-	string += "<h2>Licence details</h2>";
 	string += detail;
 	string += "<h2>Content usage</h2>";
 	string += "<p>The content, including text and structure is available for you to <em>use</em>, <em>reuse</em> and <em>share</em> (including for commercial purposes) subject to the conditions of the license above.</p>";
