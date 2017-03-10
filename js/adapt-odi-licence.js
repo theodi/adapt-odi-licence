@@ -45,8 +45,8 @@ define([
 	string += "<p>This licence does not grant you any right to use the Information in a way that suggests any official status or that the Information Provider and/or Licensor endorse you or your use of the Information.</p>";
 	string += "<h2>No warrenty</h2>";
 	string += "<p>The Information is licensed 'as is'. The Open Data Institute is not liable for any errors or omissions in the Information and shall not be liable for any loss, injury or damage of any kind caused by its use. The Information Provider does not guarantee the continued supply of the Information.</p>";
+	string += "</div>";
 	
-	string += "</div><hr class='licencePageRule'/>";
 	return string;	
     },
     
