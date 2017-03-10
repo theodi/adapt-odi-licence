@@ -28,11 +28,11 @@ define([
     getLicence: function(licence) {
 	if (licence == "CC-BY 4.0" ) {
 		url = "https://licensebuttons.net/l/by/4.0/88x31.png";
-		detail = "<span xmlns:dct='http://purl.org/dc/terms/' property='dct:title'>Learning open data</span> by <span xmlns:cc='http://creativecommons.org/ns# property='cc:attributionName'>Open Data Institute</span> is licensed under a Creative Commons Attribution 4.0 International Licence";
+		detail = "<p><span xmlns:dct='http://purl.org/dc/terms/' property='dct:title'>Learning open data</span> by <span xmlns:cc='http://creativecommons.org/ns# property='cc:attributionName'>Open Data Institute</span> is licensed under a Creative Commons Attribution 4.0 International Licence</p>";
 	}
 	if (licence == "CC-BY-SA 4.0" ) {
 		url = "https://licensebuttons.net/l/by-sa/4.0/88x31.png";
-		detail = "<span xmlns:dct='http://purl.org/dc/terms/' property='dct:title'>Learning open data</span> by <span xmlns:cc='http://creativecommons.org/ns# property='cc:attributionName'>Open Data Institute</span> is licensed under a Creative Commons Attribution-ShareAlike 4.0 International Licence";
+		detail = "<p><span xmlns:dct='http://purl.org/dc/terms/' property='dct:title'>Learning open data</span> by <span xmlns:cc='http://creativecommons.org/ns# property='cc:attributionName'>Open Data Institute</span> is licensed under a Creative Commons Attribution-ShareAlike 4.0 International Licence</p>";
 	}
 	string = "<div class='licencePageGraphicElement'><img class='licencePageGraphic' src='"+url+"'/></div>";
 	string += "<div class='licencePageText'>";
