@@ -6,6 +6,7 @@
   "issues": "",
   "displayName" : "Licence terms (in Tutor)",
   "extension" : "ODILicence",
+  "targetAttribute" : "_ODILicence",
   "description": "Add ODI Licesing template to adapt 2 courses",
   "main": "/js/adapt-odi-licence.js",
   "keywords": [

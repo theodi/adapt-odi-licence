@@ -30,7 +30,7 @@ define([
     },
     
     showLicencePage: function() {
-		items = Adapt.course.get('_licencePage')._items;
+		items = Adapt.course.get('_ODILicence')._items;
         title = "Licence";
         try {
             title = Adapt.course.get('_globals')._extensions._ODILicence.titleText;
