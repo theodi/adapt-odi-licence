@@ -3,38 +3,103 @@
     "$schema": "http://json-schema.org/draft-04/schema",
     "id": "http://jsonschema.net",
     "required": false,
+    "globals": {
+        "linkText" : {
+            "type" : "string",
+            "inputType" : "Text",
+            "title" : "Link text",
+            "default" : "Licence",
+            "validators" : [ ],
+            "help" : "The text which appears as the link to the licence popup in the theme footer.",
+            "translatable" : true
+        },
+        "titleText" : {
+            "type" : "string",
+            "inputType" : "Text",
+            "title" : "Title text",
+            "default" : "Licence",
+            "validators" : [ ],
+            "help" : "The text which appears as the title of the licence popup.",
+            "translatable" : true
+        }
+    },
     "properties" : {
         "pluginLocations" : {
             "type" : "object",
             "required" : true,
             "properties" : {
-                "config" : {
+                "course" : {
                     "type" : "object",
                     "properties" : {
-                        "_licencePage" : {
+                        "pluginLocations" : {
                             "type" : "object",
-                            "required" : false,
-                            "legend" : "Content licence",
+                            "required" : true,
                             "properties" : {
-                                 "licence" : {
-                                 	"type" : "string",
-                                        "inputType" : "Text",
-                                        "title" : "Title",
-                                        "default" : "CC-BY 4.0",
-                                        "help" : "Licence for eLearning content",
-                                        "enum" : [ 
-                                                 "CC-BY 4.0", 
-                                                 "CC-BY-SA 4.0"
-                                                 ],
-                                        "inputType" : {
-                                                 "type" : "Select",
-                                                 "options" : [ 
-                                                 	"CC-BY 4.0", 
-	                                                 "CC-BY-SA 4.0" 
-                                                 ]
-                                        },
-                                        "translatable" : true
-                                 }
+                                "course" : {
+                                    "type" : "object",
+                                    "properties" : {
+                                        "_licencePage" : {
+                                            "type" : "object",
+                                            "required" : false,
+                                            "legend" : "Licence",
+                                            "properties" : {
+                                                "_items" : {
+                                                    "type" : "array",
+                                                    "required" : true,
+                                                    "title" : "Items",
+                                                    "items" : {
+                                                        "type" : "object",
+                                                        "required" : true,
+                                                        "properties" : {
+                                                            "title" : {
+                                                                "type" : "string",
+                                                                "inputType" : "Text",
+                                                                "title" : "Title",
+                                                                "default" : "",
+                                                                "validators" : [],
+                                                                "help" : "A title",
+                                                                "translatable" : true
+                                                            },
+                                                            "description" : {
+                                                                "type" : "string",
+                                                                "inputType" : "TextArea",
+                                                                "title" : "Description",
+                                                                "default" : "",
+                                                                "validators" : [],
+                                                                "help" : "Longer description",
+                                                                "translatable" : true
+                                                            },
+                                                            "_graphic": {
+                                                                "type": "object",
+                                                                "required": false,
+                                                                "title": "Graphic",
+                                                                "properties":{
+                                                                    "alt": {
+                                                                        "type": "string",
+                                                                        "required": false,
+                                                                        "default": "",
+                                                                        "inputType": "Text",
+                                                                        "validators": [],
+                                                                        "help": "The alternative text for this image",
+                                                                        "translatable": true
+                                                                    },
+                                                                    "src": {
+                                                                        "type": "string",
+                                                                        "required": false,
+                                                                        "default": "",
+                                                                        "inputType": "Asset:image",
+                                                                        "validators": [],
+                                                                        "help": "Optional image which will be rendered with the item body text"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
