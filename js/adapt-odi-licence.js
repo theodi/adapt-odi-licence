@@ -21,7 +21,7 @@ define([
     addLink: function() {
         title = "Licence";
         try {
-            title = Adapt.course.get('_globals')._extensions._licencePage.licenceLinkText;
+            title = Adapt.course.get('_globals')._extensions._ODILicence.linkText;
         } catch(err) {}
         if( $('.about-links').prop('innerHTML').trim().length > 0) {
             $('.about-links').append(' | ');
@@ -33,7 +33,7 @@ define([
 		items = Adapt.course.get('_licencePage')._items;
         title = "Licence";
         try {
-            title = Adapt.course.get('_globals')._extensions._licencePage.titleText;
+            title = Adapt.course.get('_globals')._extensions._ODILicence.titleText;
         } catch(err) {}
     	string = "";
     	count = 1;
