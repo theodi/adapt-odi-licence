@@ -8,6 +8,7 @@ define([
     	this.listenTo(Adapt, 'licencePage:showLicencePage', this.showLicencePage);
     	this.listenTo(Adapt, 'router:course', this.updateCourse);
     	this.listenTo(Adapt, 'pageView:ready', this.addLink);
+        this.listenTo(Adapt, 'router:page', this.updatePage);
     },
 
     updateCourse: function(target) {
@@ -16,6 +17,14 @@ define([
 
     getCourse: function() {
     	return this.currentCourse;
+    },
+    
+    updatePage: function(target) {
+        this.contentObject = target;
+    },
+
+    getPage: function() {
+        return this.contentObject;
     },
 
     addLink: function() {
@@ -30,7 +39,13 @@ define([
     },
     
     showLicencePage: function() {
-		items = Adapt.course.get('_ODILicence')._items;
+        items = [];
+        try {
+            items = this.contentObject.get('_ODILicence')._items;
+        } catch(err) {}
+        if (items.length < 1) {
+            items = Adapt.course.get('_ODILicence')._items;
+        }
         title = "Licence";
         try {
             title = Adapt.course.get('_globals')._extensions._ODILicence.titleText;
