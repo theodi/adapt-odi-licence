@@ -32,11 +32,12 @@ define([
         title = "Licence";
         try {
             title = Adapt.course.get('_globals')._extensions._ODILicence.linkText;
-        } catch(err) {}
-        if( $('.about-links').prop('innerHTML').trim().length > 0) {
-            $('.about-links').append(' | ');
-        } 
-        $('.about-links').append('<a class="about" onClick=\'callLicencePageTrigger();\'>'+title+'</a>');
+        
+            if( $('.about-links').prop('innerHTML').trim().length > 0) {
+            	$('.about-links').append(' | ');
+            } 
+            $('.about-links').append('<a class="about" onClick=\'callLicencePageTrigger();\'>'+title+'</a>');
+	} catch(err) {}
     },
     
     showLicencePage: function() {
