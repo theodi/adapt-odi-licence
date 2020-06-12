@@ -1,5 +1,5 @@
 define([
-  'coreJS/adapt',
+  'core/js/adapt',
 ], function(Adapt) {
 
     var licencePage = _.extend({
@@ -88,6 +88,6 @@ define([
 });
 
 function callLicencePageTrigger() {
-    var Adapt = require('coreJS/adapt');
+    var Adapt = require('core/js/adapt');
     Adapt.trigger('licencePage:showLicencePage');
 }
